@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 
 
 anime_df = pd.read_csv("demographic_anime.csv")
-Types = anaime_df.type.unique().tolist()
+Types = anime_df.type.unique().tolist()
 All_Types = dict(zip([Type for Type in Types],[pd.read_csv(f"{Type}_similarity.csv", index_col = "name") for Type in Types]))
 
 def plot_trend(Type = None):
